@@ -3,7 +3,7 @@ import os
 
 photoslib = photoscript.PhotosLibrary()
 
-photoslib.activate()
+# photoslib.activate()
 print(f"Running Photos version: {photoslib.version}")
 
 album = photoslib.album("_iPhone")
@@ -16,5 +16,3 @@ for photo in photos:
         os.makedirs(dest, exist_ok=True)
         print(f"Exporting {photo.filename} to {dest}")
         photo.export(dest, original=True)
-
-photoslib.quit()
